@@ -1,3 +1,19 @@
 #index:
 #    path: /
-#    controller: App\Controller\DefaultController::index
+#    controller: App\Controller\BaseController::index
+
+index:
+    path: /*
+    controller: App\Controller\BaseController::index 
+
+app_lucky_number:
+    path: /lucky/number
+    controller: App\Controller\LuckyController::number
+
+app_top_geschenker:
+    path: /topgeschenker
+    controller: App\Controller\TopGeschenkController::printNumberList
+
+app_string_reverse:
+    path: /string-reverse
+    controller: App\Controller\ReverseController::reverseForm

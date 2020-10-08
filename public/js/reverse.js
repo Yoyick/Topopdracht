@@ -1,9 +1,9 @@
-var submitBtn = document.getElementById("task_omdraaien");
+var submitBtn = document.getElementById("reverse_omdraaien");
 var output = document.getElementById("output");
 
 submitBtn.onclick = function() {reverseInput()};
 function reverseInput(str){
-    var inputValue = document.getElementById("task_input").value;
+    var inputValue = document.getElementById("reverse_input").value;
     var reversedString = reverseString(inputValue);
     output.innerText = reversedString;          
 }

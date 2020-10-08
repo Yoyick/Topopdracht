@@ -17,3 +17,7 @@ app_top_geschenker:
 app_string_reverse:
     path: /string-reverse
     controller: App\Controller\ReverseController::reverseForm
+
+app_quarter_turn:
+    path: /kwartslag
+    controller: App\Controller\RotatorController::request

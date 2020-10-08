@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rotate Grid{% endblock %}
+
+{% block content %}
+    <h1>Rotate Grid</h1>
+    <div id="rotate_form">
+        {{ form(form) }}
+    </div>
+    <div id="rotate_grid">
+        {{ grid | raw }}
+    </div>    
+     <div id="rotate_current">
+        <p>{{ rotation }} degrees</p>
+    </div>       
+{% endblock %} 

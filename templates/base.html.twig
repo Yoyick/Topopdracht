@@ -5,11 +5,25 @@
         <meta charset="UTF-8">
         <title>{% block title %}Topchallenges{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <link type="text/css" rel="stylesheet" media="all" href="/css/app.css" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        <div id="content">
-            {% block content %}{% endblock %}
+        <div class="container">
+            {% block body %}{% endblock %}
+            <div class="sidebar">
+                {% block sidebar %}
+                    <h2>Topopdrachten</h2>
+                    <div><p><a href="/">Home</a></p></div>
+                    <h4>Opdrachten</h4>
+                    <div><p><a href="/topgeschenker">Topgeschenker</a></p></div>
+                    <div><p><a href="/string-reverse">String Reverse</a></p></div>
+                    <div><p><a href="/reset-password">Reset Password</a></p></div>
+                    <div><p><a href="/kwartslag">Kwartslag draaien</a></p></div>
+                {% endblock %}
+            </div>
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
         </div>
     </body>
 </html> 

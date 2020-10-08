@@ -11,7 +11,6 @@ class ReverseController extends AbstractController {
     
     public function reverseForm() {
         $task = new Task();
-        // ...
 
         $form = $this->createForm(TaskType::class, $task);
 

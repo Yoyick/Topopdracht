@@ -1,0 +1,39 @@
+p, h1, h2, h3, h4, label, small, button, a {
+    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+p {
+    margin: 0.4rem 0px;
+}
+form label {
+    margin-right: 0.5rem;
+}
+form button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.container {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    min-height: 105vh;
+}
+.sidebar {
+    margin: -2.8rem 2rem -3rem -1rem;
+    background-color: #176ea0;
+    padding: 3rem;
+    color: #fff;
+}
+.sidebar a {
+    color: #fff;   
+    text-decoration: none;
+}
+
+.btn-primary,
+.btn-secondary {
+    background-color: #166ea0;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+}

@@ -1,10 +1,11 @@
 <?php
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
-class TopGeschenkController
-{
+class TopGeschenkController extends AbstractController {
     public function printNumberList() {
         $topgeschenk_array = [];
         for ($i = 1; $i <= 100; $i++) {
@@ -18,13 +19,10 @@ class TopGeschenkController
             array_push($topgeschenk_array, ' ' . $i);
             array_push($topgeschenk_array, '</p>');
         }
+        $topgeschenker = implode("", $topgeschenk_array);
 
-        $topgeschenk_list = implode("", $topgeschenk_array);
-
-        return new Response(
-            $topgeschenk_list,
-            Response::HTTP_OK,
-            ['content-type' => 'text/html']
-        );
+        return $this->render('topgeschenker.html.twig', [
+            'list' => $topgeschenker,
+        ]);
     }
 }
